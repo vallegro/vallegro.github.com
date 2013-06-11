@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Vallegro
-tagline: another piece
+tagline: simply another piece
 author :
   name : vallegro
   email : vimystic@gmail.com
