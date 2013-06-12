@@ -40,7 +40,10 @@ frame>')
 
     <div class="content">
 
+      <font face="Sorts Mill Goudy, serif", color="#336699", weight="900">
       {{ content }}
+      </font>
+
       {% unless page.categories == empty %}
       <ul class="tag_box inline">
 	<li><i class="icon-folder-open"></i></li>
@@ -79,6 +82,8 @@ frame>')
       </ul>
     </div>
     <hr>
-    {% include JB/comments %}
+
+	{% include JB/comments %}
+
   </div>
 </div>
