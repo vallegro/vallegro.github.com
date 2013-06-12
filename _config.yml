@@ -10,8 +10,8 @@ safe: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Vallegro
-tagline: simply another piece
+title : <font color='#336699'><b>V</b></font>allegro
+tagline: s<font color='#336699'>i</font>mply another piece
 author :
   name : vallegro
   email : vimystic@gmail.com
