@@ -26,5 +26,5 @@ tags: [舔伤口]
 
 8. 第一条骗你的[蜡烛]
 
-7. I'm supposed to be running for a deadline at this moment[蜡烛]
+7. I'm supposed to be running for some deadline at this moment[蜡烛]
 
