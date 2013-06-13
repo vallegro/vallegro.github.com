@@ -30,7 +30,7 @@ tags: [舔伤口]
 
 10. 虽然应该也有高手，但大多是些平时没好好学习的孩子，跟我一样的。往事不堪回首。 
 
-8. 最前二条骗你的[蜡烛]
+8. 最前两条骗你的[蜡烛]
 
 7. I'm supposed to be running for some deadline at this moment[蜡烛]
 
