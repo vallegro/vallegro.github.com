@@ -3,7 +3,7 @@ import getpass, imaplib, email, re, os, datetime
 
 
 def remove_cret(str):
-    r=re.compile(r"(.+)\r(.+)",re.DOTALL)
+    r=re.compile(r"(.*)\r(.*)",re.DOTALL)
     m=r.match(str)
     while m!=None:
         str=''.join([m.group(1),m.group(2)])
