@@ -33,6 +33,7 @@ for num in data[0].split():
                 cont=''.join([meta,blograw])
                 print cont.encode('utf-8')
                 newblog.write(cont.encode('utf-8'))
+                newblog.close()
                 gitc='git add .'
                 os.system(gitc)
                 gitc='git commit -m "email autoupdate"'
