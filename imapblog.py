@@ -1,6 +1,18 @@
 # -*- coding: utf-8 -*- 
 import getpass, imaplib, email, re, os, datetime
 
+
+def remove_cret(str):
+    r=re.compile(r"(.+)\r(.+)",re.DOTALL)
+    m=r.match(str)
+    while m!=None:
+        str=''.join([m.group(1),m.group(2)])
+        m=r.match(str)
+    return str
+
+
+
+
 M = imaplib.IMAP4_SSL('imap.gmail.com')
 M.login('blogvallegro@gmail.com', '123qazWSX')
 M.select()
@@ -24,6 +36,7 @@ for num in data[0].split():
                 title = m.group(2)
                 title = title[2:len(title)]
                 blograw = m.group(3)
+                blograw = remove_cret(blograw)
                 rakec=''.join(['rake post title=\"',name,'\"'])
                 os.system(rakec)
                 date=datetime.date.today().isoformat()
@@ -31,8 +44,8 @@ for num in data[0].split():
                 newblog=open(filename,'w+b')
                 meta=''.join([u"---\nlayout: post\ntitle: \"",title,u"\"\n---\n{% include JB/setup %}\n"])
                 cont=''.join([meta,blograw])
-                print cont.encode('utf-8')
-                newblog.write(cont.encode('utf-8'))
+                print cont
+                newblog.write(cont.encode("utf-8"))
                 newblog.close()
                 gitc='git add .'
                 os.system(gitc)
@@ -42,3 +55,4 @@ for num in data[0].split():
                 os.system(gitc)
 M.close()
 M.logout()
+
