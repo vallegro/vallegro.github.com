@@ -44,7 +44,6 @@ def fnu():
                     newblog=open(filename,'w+b')
                     meta=''.join([u"---\nlayout: post\ntitle: \"",title,u"\"\n---\n{% include JB/setup %}\n"])
                     cont=''.join([meta,blograw])
-                    print cont
                     newblog.write(cont.encode("utf-8"))
                     newblog.close()
                     gitc='git add .'
