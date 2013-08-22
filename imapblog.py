@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- 
-import getpass, imaplib, email, re, os, datetime, time
+import getpass, imaplib, email, re, os, datetime, time, email.charset
 
 
 def remove_cret(str):
@@ -41,6 +41,7 @@ def fnu():
                     os.system(rakec)
                     date=datetime.date.today().isoformat()
                     filename=''.join(['./_posts/',date,'-',name,'.md'])
+                   # try:
                     newblog=open(filename,'w+b')
                     meta=''.join([u"---\nlayout: post\ntitle: \"",title,u"\"\n---\n{% include JB/setup %}\n"])
                     cont=''.join([meta,blograw])
@@ -51,12 +52,25 @@ def fnu():
                     gitc='git commit -m "email autoupdate"'
                     os.system(gitc)
                     gitc='git push'
-                    os.system(gitc)
+                 #      os.system(gitc)
+                    #    break
+                  #  except:
+                   #     rmc=''.join(['rm ',filename])
+                    #    os.system(rmc)
+                      #  gitc=''.join(['git rm ',filename ])
+                     #   os.system(gitc)
+                       # gitc='git commit -m "email autoupdate"'
+                       # os.system(gitc)
+                       # gitc='git push'
+                 #       os.system(gitc)
     M.close()
     M.logout()
 
-while 1:
+while True:
+#    try:
     fnu()
-    time.sleep(300)
+  #  except:
+   #     print 'err'
+    time.sleep(10)
 
 
