@@ -65,7 +65,7 @@ while True:
         fnu()
     except:
         print 'err'
-        time.sleep(10)
+        time.sleep(120)
 
 
 
