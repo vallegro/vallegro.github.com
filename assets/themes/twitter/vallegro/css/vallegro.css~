@@ -1,0 +1,33 @@
+/*
+ * vallegro v 0.0.1
+ * author: vallegro
+ * email:vimystic@gmail.com
+ */
+body {font-family:'Sorts Mill Goudy';color:#9F1D35}
+
+
+/*------------
+PAGE STRUCTURE
+*/
+#container{width:1200px;margin:0 auto}
+#main{width:auto;dispaly:block;padding:10px 0;}
+#navbar{background-color:#900000;width:400;color:#FA8072;float:left;padding:10px;}
+#flagtail {
+       width: 0;
+       height: 0;
+       border-top: 200px solid #900000;
+       border-right: 350px solid transparent;
+}
+#column_right{width:619px;float:left;margin:20px;}
+#div.spacer{clear:both; height:10px;display:block;}
+
+
+
+
+/*-----------
+link
+*/
+a {color:#FA8072;text-decoration:none;}
+a:hover {color:#900000}
+a.tagline {font-size:150%}
+a.nav:hover {color:#FFFFFF}

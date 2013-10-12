@@ -28,10 +28,10 @@ frame>')
 
 
 
-<div class="row-fluid post-full">
-  <div class="span12">
+<div >
+  <div>
     <div class="date">
-      <span> <p> <font color='#336699' size='4px'>{{ page.date | date_to_long_string }}</font></p> </span>
+      <span> <p>{{ page.date | date_to_long_string }}</p> </span>
     </div>
 
 
@@ -40,9 +40,9 @@ frame>')
 
     <div class="content">
 
-      <font face="Sorts Mill Goudy, serif", color="#336699", weight="900">
+
       {{ content }}
-      </font>
+
 
       {% unless page.categories == empty %}
       <ul class="tag_box inline">

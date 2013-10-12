@@ -15,9 +15,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>
+<!--    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all"> -->
+    <link href="{{ ASSET_PATH }}/vallegro/css/vallegro.css" rel="stylesheet">
+     <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400 italic' rel='stylesheet' type='text/css'>   
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -32,34 +33,40 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-	  <a class="tagline" href="{{HOME_PATH}}">{{ site.tagline}}</a>
-	  <a class="tagline" href="{{HOME_PATH}}more.html"> and perhaps more</a>
-	  <ul class="nav">
+    <div id="container">
+      <div id="main">
+        <div id="navbar">
+          <div>
+	    <a class="tagline" href="{{HOME_PATH}}">{{ site.tagline}}</a>
+	  </div>
+	  <div>
+	    <a class="tagline" href="{{HOME_PATH}}more.html"> and perhaps more</a>
+	  </div>
+	  <ul>
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
+	    {% assign posts_collate = site.posts %}
+	    {% include JB/posts_collate %}
           </ul>
         </div>
+	<div id="column_right">
+	  <div class="content">
+            {{ content }}
+          </div>
+	  <div >
+	    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with Jekyll
+	    </p>
+	  </div>
+ 	</div>
+	<div class="spacer"> </div>
       </div>
+      
     </div>
+   
 
-    <div class="container-narrow">
-
-      <div class="content">
-        {{ content }}
-
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with Jekyll
-        </p>
-      </footer>
-
-    </div>
+     
+ 
 
 
     {% include JB/analytics %}

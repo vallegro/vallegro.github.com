@@ -11,7 +11,7 @@ safe: true
 # so be sure to set them if your theme uses them.
 #
 title : <font color='#336699'>Vallegro</font>
-tagline: s<font color='#336699'><b>i</b></font>mply another piece
+tagline: simply another piece
 author :
   name : Vallegro
   email : vimystic@gmail.com
