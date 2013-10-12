@@ -42,14 +42,13 @@
 	  <div>
 	    <a class="tagline" href="{{HOME_PATH}}more.html"> and perhaps more</a>
 	  </div>
-	  <ul>
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-	  </ul>
-	  {% assign posts_collate = site.posts %}
-	  {% include JB/posts_collate %}
-          
+	  <div>
+	    {% assign posts_collate = site.posts %}
+	    {% include JB/posts_collate %}
+          </div>
+	  <div>
+	   <h2> <a href="{{HOME_PATH}}links.html">friends</a> </h2>
+	  </div>
         </div>
 	<div id="column_right">
 	  <div class="content">

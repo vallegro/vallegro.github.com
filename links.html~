@@ -1,0 +1,8 @@
+---
+layout: page
+title: "Links"
+description: ""
+---
+{% include JB/setup %}
+<a href="http://www.liuzijian.com/">ottovon</a>
+<a href="http://gillwindy.com/">清漠月下</a>
